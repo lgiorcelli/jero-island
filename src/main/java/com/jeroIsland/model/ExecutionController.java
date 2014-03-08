@@ -2,20 +2,17 @@ package com.jeroIsland.model;
 
 public class ExecutionController extends Thread {
 	private boolean alive;
-	private static final int PERIOD = 30;
-	
-	public ExecutionController() {
-		this("Anonymous");
+	private Controllable controllable;
+	private static final int PERIOD = 100;
+
+	public ExecutionController(Controllable controllable) {
+		this.controllable = controllable;
 	}
-	
-	public ExecutionController(String name) {
-		super(name);
-	}
-	
+
 	public void end() {
 		alive = false;
 	}
-	
+
 	public boolean alive() {
 		return alive;
 	}
@@ -24,10 +21,11 @@ public class ExecutionController extends Thread {
 	public void run() {
 		alive = true;
 		while (alive) {
-			System.out.println(getName());
+			controllable.run();
 			try {
 				sleep(PERIOD);
 			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
 		}
 	}

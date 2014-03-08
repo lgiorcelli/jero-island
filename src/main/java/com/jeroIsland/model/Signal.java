@@ -1,9 +1,13 @@
 package com.jeroIsland.model;
 
 public class Signal {
-	private Integer value;
+	private String value;
 
-	public Signal(Integer value) {
+	public Signal(String value) {
 		this.value = value;
+	}
+	
+	public String asText() {
+		return value;
 	}
 }
