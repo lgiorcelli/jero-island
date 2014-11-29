@@ -1,4 +1,6 @@
-package com.jeroIsland.model;
+package com.jeroIsland.model.old;
+
+import com.jeroIsland.model.Monitor;
 
 public interface Monitoreable {
 

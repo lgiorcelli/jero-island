@@ -1,4 +1,4 @@
-package com.jeroIsland.model;
+package com.jeroIsland.model.old;
 
 public class Receiver {
  

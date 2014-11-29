@@ -1,5 +1,8 @@
 package com.jeroIsland.model;
 
+import com.jeroIsland.model.old.Wire;
+import com.jeroIsland.model.signal.ISignal;
+
 public class Output {
 	private Wire wire;
 	
@@ -7,7 +10,7 @@ public class Output {
 		this.wire = wire;
 	}
 
-	public void transmit(Signal signal) {
+	public void transmit(ISignal signal) {
 		this.wire.transmit(signal);
 	}
 

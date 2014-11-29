@@ -1,7 +1,9 @@
 package com.jeroIsland.model;
 
+import com.jeroIsland.model.signal.ISignal;
+
 public interface Monitor {
 
-	void receive(Signal createSignal);
+	void receive(ISignal createSignal);
 
 }

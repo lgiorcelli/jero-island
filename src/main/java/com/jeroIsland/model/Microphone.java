@@ -3,6 +3,10 @@ package com.jeroIsland.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.jeroIsland.model.old.Monitoreable;
+import com.jeroIsland.model.old.Wire;
+import com.jeroIsland.model.signal.ISignal;
+
 public class Microphone implements Monitor {
 
 	private Set<Monitoreable> observed = new HashSet<Monitoreable>();
@@ -18,7 +22,7 @@ public class Microphone implements Monitor {
 	}
 
 	@Override
-	public void receive(Signal signal) {
+	public void receive(ISignal signal) {
 		//convert signal?
 		this.output.transmit(signal);
 	}

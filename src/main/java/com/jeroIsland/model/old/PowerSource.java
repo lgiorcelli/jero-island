@@ -1,21 +1,22 @@
-package com.jeroIsland.model;
+package com.jeroIsland.model.old;
 
 import java.util.HashSet;
 import java.util.Set;
 
+
 public class PowerSource {
-	private Set<Plug> plugs = new HashSet<Plug>();
+	private Set<OldPlug> plugs = new HashSet<OldPlug>();
 	public static final Integer VOLTAGE = 10;
 	private int voltage;
 
 	public void on() {
 		this.voltage = VOLTAGE;
-		for (Plug plug : plugs) {
+		for (OldPlug plug : plugs) {
 			plug.send(voltage);
 		}
 	}
 
-	public void connect(Plug plug) {
+	public void connect(OldPlug plug) {
 		this.plugs.add(plug);
 	}
 }

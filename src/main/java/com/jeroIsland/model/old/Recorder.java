@@ -1,7 +1,12 @@
-package com.jeroIsland.model;
+package com.jeroIsland.model.old;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.jeroIsland.model.Controllable;
+import com.jeroIsland.model.ExecutionController;
+import com.jeroIsland.model.signal.ISignal;
+import com.jeroIsland.model.signal.Signal;
 
 public class Recorder implements Controllable{
 	private ExecutionController controller;
@@ -30,9 +35,9 @@ public class Recorder implements Controllable{
 		controller.end();
 	}
 	
-	public Signal play() {
+	public ISignal play() {
 		System.out.println("playing " + recorded.size());
-		for (Signal signal : recorded) {
+		for (ISignal signal : recorded) {
 			System.out.println(signal.asText());
 		}
 		return null;

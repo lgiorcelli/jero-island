@@ -1,0 +1,10 @@
+Historia 1
+- Como usuario quiero poder grabar un discurso basico a traves de un microfono, para poder reproducirlo en el futuro
+
+Dado un microfono basico
+Y un cable conectado al microfono
+Y un grabador con el cable conectado
+Cuando aprieto el boton de grabado durante un periodo X
+Entonces el grabador almacena la señal emitida durante el periodo X
+
+

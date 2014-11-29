@@ -1,27 +1,22 @@
 package com.jeroIsland.model;
 
+import com.jeroIsland.model.signal.ISignal;
+
 public class Plug {
-	private Integer voltage;
-	private Signal signal;
-	private Wire wire;
-	
-	public Plug(Wire wire) {
-		this.wire = wire;
-	}
-	
-	public Signal getSignal() {
-		return signal;
-	}
-	
-	public Integer getVoltage() {
-		return voltage;
+	private Plug connect;
+	public Plug() {
+		this.connect = new NoPlug();
 	}
 
-	public void send(Integer voltage) {
-		this.wire.transmit(voltage, this);
+	public void connect(Plug plug) {
+		this.connect = plug;
 	}
 	
-	public void receive(Integer voltage) {
-		this.voltage = voltage;
+	public void send(ISignal capture) {
+		this.connect.send(capture);
+	}
+
+	public class NoPlug extends Plug {
+		
 	}
 }

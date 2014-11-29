@@ -1,5 +1,5 @@
 import com.jeroIsland.model.BasicMicrophone;
-import com.jeroIsland.model.Recorder;
+import com.jeroIsland.model.old.Recorder;
 
 
 public class ThreadTest {
